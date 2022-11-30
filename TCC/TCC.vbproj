@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16B06286-8B18-49A9-A632-9BE10C079938}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TCC.My.MyApplication</StartupObject>
+    <RootNamespace>TCC</RootNamespace>
+    <AssemblyName>TCC</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TCC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TCC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icone-Jack.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Compression.Base, Version=20.2460.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.20.2.0.50\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.2460.0.50, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.20.2.0.50\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\frmMenus.Designer.vb">
+      <DependentUpon>frmMenus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmMenus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmSetores.Designer.vb">
+      <DependentUpon>frmSetores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmSetores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa Registradora\frmCaixaResgistradora.Designer.vb">
+      <DependentUpon>frmCaixaResgistradora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa Registradora\frmCaixaResgistradora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa\frmAddItens.Designer.vb">
+      <DependentUpon>frmAddItens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\frmAddItens.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa\frmCriaCaixa.Designer.vb">
+      <DependentUpon>frmCriaCaixa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\frmCriaCaixa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa\frmEnviarCaixa.Designer.vb">
+      <DependentUpon>frmEnviarCaixa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\frmEnviarCaixa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa\frmFecharCaixa.Designer.vb">
+      <DependentUpon>frmFecharCaixa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\frmFecharCaixa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa\frmItensCaixa.Designer.vb">
+      <DependentUpon>frmItensCaixa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\frmItensCaixa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa\frmReabrirCaixa.Designer.vb">
+      <DependentUpon>frmReabrirCaixa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa\frmReabrirCaixa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumericUpDownColumn.vb" />
+    <Compile Include="Itens\frmAddClasse.Designer.vb">
+      <DependentUpon>frmAddClasse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Itens\frmAddClasse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Itens\frmCadastroItens.Designer.vb">
+      <DependentUpon>frmCadastroItens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Itens\frmCadastroItens.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Itens\frmFornecedores.Designer.vb">
+      <DependentUpon>frmFornecedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Itens\frmFornecedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Itens\frmMovimentaItens.Designer.vb">
+      <DependentUpon>frmMovimentaItens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Itens\frmMovimentaItens.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmSenha.Designer.vb">
+      <DependentUpon>frmSenha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmSenha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmUsuarios.Designer.vb">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="variaveis.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administrador\frmMenus.resx">
+      <DependentUpon>frmMenus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmSetores.resx">
+      <DependentUpon>frmSetores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa Registradora\frmCaixaResgistradora.resx">
+      <DependentUpon>frmCaixaResgistradora.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\frmAddItens.resx">
+      <DependentUpon>frmAddItens.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\frmCriaCaixa.resx">
+      <DependentUpon>frmCriaCaixa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\frmEnviarCaixa.resx">
+      <DependentUpon>frmEnviarCaixa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\frmFecharCaixa.resx">
+      <DependentUpon>frmFecharCaixa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\frmItensCaixa.resx">
+      <DependentUpon>frmItensCaixa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa\frmReabrirCaixa.resx">
+      <DependentUpon>frmReabrirCaixa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Itens\frmAddClasse.resx">
+      <DependentUpon>frmAddClasse.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Itens\frmCadastroItens.resx">
+      <DependentUpon>frmCadastroItens.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Itens\frmFornecedores.resx">
+      <DependentUpon>frmFornecedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Itens\frmMovimentaItens.resx">
+      <DependentUpon>frmMovimentaItens.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmSenha.resx">
+      <DependentUpon>frmSenha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\olho %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-de-simbolo-de-mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\olho %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icone-Jack.ico" />
+    <None Include="Resources\mais.png" />
+    <None Include="Resources\itens.png" />
+    <None Include="Resources\parcela %281%291.png" />
+    <None Include="Resources\parcela %281%29.png" />
+    <None Include="Resources\grafico-de-setores.png" />
+    <None Include="Resources\grupo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
