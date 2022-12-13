@@ -24,9 +24,9 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Menu1 = New System.Windows.Forms.MenuStrip()
         Me.mnAdmin = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -54,6 +54,10 @@ Partial Class frmPrincipal
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.dgvEmbaEnviadas = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cboEnviado = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.dtFim3 = New System.Windows.Forms.DateTimePicker()
         Me.dtInicio3 = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -84,18 +88,14 @@ Partial Class frmPrincipal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvFornecedor = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.cboEnviado = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.dgvEmbaEnviadas = New System.Windows.Forms.DataGridView()
         Me.Menu1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        CType(Me.dgvEmbaEnviadas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.dgvMovimenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgvFornecedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
-        CType(Me.dgvEmbaEnviadas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Menu1
@@ -288,6 +288,57 @@ Partial Class frmPrincipal
         Me.TabPage3.Text = "Emba. enviadas no mês"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'dgvEmbaEnviadas
+        '
+        Me.dgvEmbaEnviadas.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEmbaEnviadas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvEmbaEnviadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmbaEnviadas.Location = New System.Drawing.Point(6, 37)
+        Me.dgvEmbaEnviadas.Name = "dgvEmbaEnviadas"
+        Me.dgvEmbaEnviadas.Size = New System.Drawing.Size(693, 273)
+        Me.dgvEmbaEnviadas.TabIndex = 41
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Arial", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.ImageKey = "excel.png"
+        Me.Button1.ImageList = Me.ImageList1
+        Me.Button1.Location = New System.Drawing.Point(583, 316)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(116, 37)
+        Me.Button1.TabIndex = 40
+        Me.Button1.Text = "Exportar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'cboEnviado
+        '
+        Me.cboEnviado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboEnviado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboEnviado.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.cboEnviado.FormattingEnabled = True
+        Me.cboEnviado.Location = New System.Drawing.Point(271, 8)
+        Me.cboEnviado.Name = "cboEnviado"
+        Me.cboEnviado.Size = New System.Drawing.Size(303, 23)
+        Me.cboEnviado.TabIndex = 28
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(196, 12)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(75, 15)
+        Me.Label12.TabIndex = 27
+        Me.Label12.Text = "Enviado por:"
+        '
         'dtFim3
         '
         Me.dtFim3.CustomFormat = "MM/yyyy"
@@ -472,7 +523,7 @@ Partial Class frmPrincipal
         Me.dgvMovimenta.BackgroundColor = System.Drawing.Color.White
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -626,7 +677,7 @@ Partial Class frmPrincipal
         Me.dgvFornecedor.BackgroundColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -651,57 +702,6 @@ Partial Class frmPrincipal
         Me.TabControl1.Size = New System.Drawing.Size(713, 392)
         Me.TabControl1.TabIndex = 5
         '
-        'cboEnviado
-        '
-        Me.cboEnviado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cboEnviado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cboEnviado.Font = New System.Drawing.Font("Arial", 9.0!)
-        Me.cboEnviado.FormattingEnabled = True
-        Me.cboEnviado.Location = New System.Drawing.Point(271, 8)
-        Me.cboEnviado.Name = "cboEnviado"
-        Me.cboEnviado.Size = New System.Drawing.Size(303, 23)
-        Me.cboEnviado.TabIndex = 28
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(196, 12)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(75, 15)
-        Me.Label12.TabIndex = 27
-        Me.Label12.Text = "Enviado por:"
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Arial", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.ImageKey = "excel.png"
-        Me.Button1.ImageList = Me.ImageList1
-        Me.Button1.Location = New System.Drawing.Point(583, 316)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 37)
-        Me.Button1.TabIndex = 40
-        Me.Button1.Text = "Exportar"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'dgvEmbaEnviadas
-        '
-        Me.dgvEmbaEnviadas.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvEmbaEnviadas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvEmbaEnviadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmbaEnviadas.Location = New System.Drawing.Point(6, 37)
-        Me.dgvEmbaEnviadas.Name = "dgvEmbaEnviadas"
-        Me.dgvEmbaEnviadas.Size = New System.Drawing.Size(693, 273)
-        Me.dgvEmbaEnviadas.TabIndex = 41
-        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -720,6 +720,7 @@ Partial Class frmPrincipal
         Me.Menu1.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        CType(Me.dgvEmbaEnviadas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.dgvMovimenta, System.ComponentModel.ISupportInitialize).EndInit()
@@ -727,7 +728,6 @@ Partial Class frmPrincipal
         Me.TabPage1.PerformLayout()
         CType(Me.dgvFornecedor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
-        CType(Me.dgvEmbaEnviadas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

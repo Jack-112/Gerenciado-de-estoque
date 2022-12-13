@@ -189,7 +189,7 @@ Public Class frmItensCaixa
             If dgvItens.Rows(dgvItens.CurrentRow.Index).Cells(6).Value <> 1 Then
                 dgvItens.Rows(dgvItens.CurrentRow.Index).Cells(6).Value -= 1
                 valor_final -= CDbl(dgvItens.Rows(dgvItens.CurrentRow.Index).Cells(3).Value)
-                txtTotal.Text = "Valor da caixa: R$ " & valor_final
+                txtTotal.Text = "Valor da embalagem: R$ " & valor_final
                 Try
                     sql = ""
                     sql += "update itens set quantidade=quantidade+1 where id_item = " & dgvItens.Rows(dgvItens.CurrentRow.Index).Cells(0).Value
@@ -223,12 +223,12 @@ Public Class frmItensCaixa
                 If valor_final < 0 Then
                     valor_final = 0
                 End If
-                txtTotal.Text = "Valor da caixa: R$ " & valor_final
+                txtTotal.Text = "Valor da embalagem: R$ " & valor_final
                 dgvItens.Rows.Remove(dgvItens.Rows(dgvItens.CurrentRow.Index))
                 If dgvItens.Rows.Count = 0 Then
                     dgvItens.Invoke(Sub()
                                         dgvItens.Columns.Clear()
-                                        txtTotal.Text = "Valor da caixa: R$ 0 "
+                                        txtTotal.Text = "Valor da embalagem: R$ 0 "
                                     End Sub)
                 End If
 
@@ -260,7 +260,7 @@ Public Class frmItensCaixa
                                 dgvItens.MultiSelect = False
                             End Sub)
             valor_final = 0
-            txtTotal.Text = "Valor da caixa: R$ " & valor_final
+            txtTotal.Text = "Valor da embalagem: R$ " & valor_final
         End If
 
         idCaixa = cboCaixa.SelectedValue
@@ -334,7 +334,7 @@ Public Class frmItensCaixa
 
 
                             End Sub)
-            txtTotal.Text = "Valor da caixa: R$ " & ds.Tables(0).Rows(0).Item("valor_total")
+            txtTotal.Text = "Valor da embalagem: R$ " & ds.Tables(0).Rows(0).Item("valor_total")
             valor_final = ds.Tables(0).Rows(0).Item("valor_total")
 
         Catch ex As Exception
@@ -397,6 +397,6 @@ Public Class frmItensCaixa
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
         frmAddItens.ShowDialog()
-        txtTotal.Text = "Valor da caixa: R$ " & valor_final
+        txtTotal.Text = "Valor da embalagem: R$ " & valor_final
     End Sub
 End Class

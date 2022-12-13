@@ -92,9 +92,9 @@ Partial Class frmItensCaixa
         Me.txtTotal.Font = New System.Drawing.Font("Arial", 20.0!, System.Drawing.FontStyle.Bold)
         Me.txtTotal.Location = New System.Drawing.Point(6, 361)
         Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(274, 32)
+        Me.txtTotal.Size = New System.Drawing.Size(360, 32)
         Me.txtTotal.TabIndex = 9
-        Me.txtTotal.Text = "Valor da caixa: R$ 0"
+        Me.txtTotal.Text = "Valor da embalagem: R$ 0"
         '
         'btnSalvar
         '

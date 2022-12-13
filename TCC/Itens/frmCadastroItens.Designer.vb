@@ -321,7 +321,7 @@ Partial Class frmCadastroItens
         Me.Label9.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.Location = New System.Drawing.Point(129, 635)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(72, 16)
+        Me.Label9.Size = New System.Drawing.Size(71, 16)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Vencidos"
         '
@@ -331,7 +331,7 @@ Partial Class frmCadastroItens
         Me.Label10.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.Location = New System.Drawing.Point(229, 635)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(155, 16)
+        Me.Label10.Size = New System.Drawing.Size(154, 16)
         Me.Label10.TabIndex = 26
         Me.Label10.Text = "Perto do vencimento"
         '
@@ -350,7 +350,7 @@ Partial Class frmCadastroItens
         Me.Label11.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label11.Location = New System.Drawing.Point(410, 635)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(109, 16)
+        Me.Label11.Size = New System.Drawing.Size(108, 16)
         Me.Label11.TabIndex = 27
         Me.Label11.Text = "Baixo estoque"
         '
@@ -412,7 +412,7 @@ Partial Class frmCadastroItens
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(117, 15)
         Me.Label14.TabIndex = 33
-        Me.Label14.Text = "Qauntidade minima"
+        Me.Label14.Text = "Quantidade minima"
         '
         'txtBusca
         '

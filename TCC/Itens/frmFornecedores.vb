@@ -176,7 +176,24 @@ Public Class frmFornecedores
         If MsgBox("Deseja realmente excluir o Fornecedor " & txtNome.Text & " ?", vbQuestion + vbYesNo + vbDefaultButton2, "Atenção") = vbNo Then
             Exit Sub
         End If
+        Try
+            sql = ""
+            sql += "SELECT * FROM itens WHERE id_fornecedor =" & id
 
+            conn.Close()
+            conn.Open()
+
+            Dim comando As New MySqlCommand(sql, conn)
+            Dim dr As New MySqlDataAdapter(comando)
+            Dim ds As New DataSet
+            dr.Fill(ds)
+            If ds.Tables(0).Rows.Count > 0 Then
+                MsgBox("O fornecedor possui itens cadastrados")
+            End If
+
+        Catch ex As Exception
+
+        End Try
         cancela = 0
         Try
             sql = ""

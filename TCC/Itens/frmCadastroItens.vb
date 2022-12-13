@@ -828,7 +828,7 @@ Public Class frmCadastroItens
         Dim conn As New MySqlConnection(My.Settings.conexao)
         Dim sql As String
 
-        If MsgBox("Deseja realmente excluir o item" & txtNome.Text & " ?", vbQuestion + vbYesNo + vbDefaultButton2, "Atenção") = vbNo Then
+        If MsgBox("Deseja realmente excluir o item " & txtNome.Text & " ?", vbQuestion + vbYesNo + vbDefaultButton2, "Atenção") = vbNo Then
             Exit Sub
         End If
 

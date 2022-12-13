@@ -11,7 +11,7 @@ Public Class frmReabrirCaixa
         Try
             sql = ""
             sql += "SELECT 0'id_caixa','Selecione uma caixa'nm_caixa FROM DUAL UNION SELECT id_caixa,nm_caixa FROM caixas "
-            sql += "WHERE id_caixa IN (SELECT id_caixa FROM  caixas_fechadas)"
+            sql += "WHERE id_caixa IN (SELECT id_caixa FROM  caixas_fechadas) and id_caixa not in (select id_caixa from enviar_caixas)"
             Dim comando As New MySqlCommand(sql, conn)
             Dim dr As New MySqlDataAdapter(comando)
             Dim ds As New DataTable

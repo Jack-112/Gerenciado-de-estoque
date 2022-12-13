@@ -893,4 +893,18 @@ Public Class frmPrincipal
     Private Sub cboEnviado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboEnviado.SelectedIndexChanged
         carregaDGV()
     End Sub
+
+    Private Sub dtInicio3_ValueChanged(sender As Object, e As EventArgs) Handles dtInicio3.ValueChanged
+        If valida = 0 Then
+            Exit Sub
+        End If
+        carregaDGV()
+    End Sub
+
+    Private Sub dtFim3_ValueChanged(sender As Object, e As EventArgs) Handles dtFim3.ValueChanged
+        If valida = 0 Then
+            Exit Sub
+        End If
+        carregaDGV()
+    End Sub
 End Class

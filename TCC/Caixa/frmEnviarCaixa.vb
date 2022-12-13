@@ -58,12 +58,12 @@ Public Class frmEnviarCaixa
 
                                  dgvCaixas.Columns(1).Visible = False
 
-                                 dgvCaixas.Columns(2).HeaderText = "Caixa"
+                                 dgvCaixas.Columns(2).HeaderText = "Embalagem"
                                  dgvCaixas.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
                                  dgvCaixas.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
                                  dgvCaixas.Columns(2).ReadOnly = True
 
-                                 dgvCaixas.Columns(3).HeaderText = "Valor da caixa"
+                                 dgvCaixas.Columns(3).HeaderText = "Valor da embalagem"
                                  dgvCaixas.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
                                  dgvCaixas.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
                                  dgvCaixas.Columns(3).ReadOnly = True
@@ -120,11 +120,11 @@ Public Class frmEnviarCaixa
 
         Next i
         If contador = 0 Then
-            MsgBox("Selecione uma caixa", vbExclamation, "atenção!")
+            MsgBox("Selecione uma embalagem", vbExclamation, "atenção!")
             Exit Sub
         End If
         carregaDgv()
-        MsgBox("Caixas enviadas com suscesso", vbInformation, "atenção !")
+        MsgBox("embalagens enviadas com suscesso", vbInformation, "atenção !")
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
