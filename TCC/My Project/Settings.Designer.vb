@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=tcc_jvm")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=estoque")>  _
         Public ReadOnly Property conexao() As String
             Get
                 Return CType(Me("conexao"),String)
