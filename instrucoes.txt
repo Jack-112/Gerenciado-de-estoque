@@ -1,0 +1,4 @@
+importar o banco de dados para uma base chamada estoque
+
+usuário: admin
+senha: admin
