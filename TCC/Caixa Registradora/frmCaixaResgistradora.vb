@@ -212,6 +212,7 @@ Public Class frmCaixaResgistradora
             txtQuantidade.Value = 1
             txtTotalPagar.Text = "R$ 0"
             txtCodigoDeBarras.Text = ""
+            valor_final = 0
             dgvItens.Invoke(Sub()
                                 dgvItens.Columns.Clear()
                                 dgvItens.ClearSelection()
